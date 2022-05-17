@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// php artisan make:controller ProductController --resource --model=Model/Product
+// php artisan make:migration create_ref_products_units_table
+
+Route::resource('products', 'ProductController');
